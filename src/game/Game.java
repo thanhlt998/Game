@@ -104,7 +104,7 @@ public class Game {
 		
 		// express emotion if is Virtual Player
 		for (Player player : playerList) {
-			if (player instanceof VirtualPlayer) {
+			if (player instanceof VirtualPlayer && !player.isWon()) {
 				System.out.print(player.getPlayerName() + ": ");
 				((VirtualPlayer) player).expressEmotion();
 			}
